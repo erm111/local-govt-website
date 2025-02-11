@@ -75,6 +75,16 @@
     text-decoration: none;
 }
 
+.nav-list a.active {
+    background-color: #192f29;
+    color: white;
+}
+
+.nav-list a.active:hover {
+    background-color: #192f29;
+    color: white;
+}
+
 @media screen and (max-width: 968px) {
     .nav-list {
         gap: 0.5rem;

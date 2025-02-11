@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="../public/css/style.css">
 </head>
 <body>
+    <?php
+    function isActive($page) {
+        $currentFile = basename($_SERVER['PHP_SELF']);
+        return ($currentFile == $page) ? 'active' : '';
+    }
+    ?>
     <header class="main-header">
         <div class="logo-container">
             <img src="../public/images/coa_logo.jpg" alt="Aboh Mbaise Logo" class="logo">
@@ -20,13 +26,13 @@
         </button>
         <nav class="main-nav">
             <ul class="nav-list">
-                <li><a href="../pages/Home.php">Home</a></li>
-                <li><a href="../pages/about.php">About Us</a></li>
-                <li><a href="../pages/workers.php">Workers</a></li>
-                <li><a href="../pages/jobs.php">Jobs</a></li>
-                <li><a href="../pages/projects.php">Projects</a></li>
-                <li><a href="../pages/contact.php">Contact</a></li>
-                <li><a href="blog/index.php">Blog</a></li>
+                <li><a href="../pages/Home.php" class="<?php echo isActive('Home.php'); ?>">Home</a></li>
+                <li><a href="../pages/about.php" class="<?php echo isActive('about.php'); ?>">About Us</a></li>
+                <li><a href="../pages/workers.php" class="<?php echo isActive('workers.php'); ?>">Workers</a></li>
+                <li><a href="../pages/jobs.php" class="<?php echo isActive('jobs.php'); ?>">Jobs</a></li>
+                <li><a href="../pages/projects.php" class="<?php echo isActive('projects.php'); ?>">Projects</a></li>
+                <li><a href="../pages/contact.php" class="<?php echo isActive('contact.php'); ?>">Contact</a></li>
+                <li><a href="blog/index.php" class="<?php echo isActive('index.php'); ?>">Blog</a></li>
             </ul>
         </nav>
     </header>
