@@ -1,0 +1,151 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.welcome {
+    text-align: center;
+    padding: 40px 0;
+    margin-bottom: 40px;
+}
+
+.welcome h2 {
+    font-size: 2.8rem;
+    color: #192f29;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.welcome p {
+    font-size: 1.2rem;
+    color: #192f29;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.about-section {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    margin: 60px 0;
+    flex-wrap: wrap;
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.about-content {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 20px;
+}
+
+.about-content h3 {
+    font-size: 2rem;
+    color: #192f29;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #2e8b57;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #236b43;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(46, 139, 87, 0.2);
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.about-image figure {
+    margin: 0;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.about-image figcaption {
+    text-align: center;
+    margin-top: 12px;
+    color: #666;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.highlights {
+    padding: 40px 0;
+}
+
+.highlights h3 {
+    text-align: center;
+    color: #192f29;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .welcome h2 {
+        font-size: 2rem;
+    }
+    
+    .welcome p {
+        font-size: 1.1rem;
+    }
+    
+    .about-section {
+        flex-direction: column;
+        padding: 30px;
+        gap: 30px;
+    }
+    
+    .about-content {
+        padding-right: 0;
+    }
+    
+    .about-content h3 {
+        font-size: 1.8rem;
+    }
+}

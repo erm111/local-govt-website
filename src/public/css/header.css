@@ -1,0 +1,148 @@
+.main-header {
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.site-title {
+    color: #192f29;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    padding: 5px;
+    background: none;
+    border: none;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #192f29;
+    transition: all 0.3s ease;
+}
+
+.main-nav {
+    margin-top: 0;
+}
+
+.nav-list {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #192f29;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.nav-list a:hover {
+    background-color: #e0f2e9;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 968px) {
+    .nav-list {
+        gap: 0.5rem;
+    }
+    
+    .nav-list a {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 73px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 73px);
+        background-color: white;
+        transition: 0.3s ease;
+        z-index: 1000;
+    }
+
+    .main-nav.active {
+        left: 0;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 0;
+        padding: 1rem;
+    }
+
+    .nav-list li {
+        width: 100%;
+    }
+
+    .nav-list a {
+        display: block;
+        padding: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .site-title {
+        font-size: 1rem;
+    }
+
+    .logo {
+        width: 30px;
+        height: 30px;
+    }
+}
