@@ -36,19 +36,19 @@
             <section class="highlights">
                 <h3>Latest Updates</h3>
                 <div class="grid">
-                    <div class="card">
+                    <div class="card" data-href="projects.php">
                         <h4>Community Projects</h4>
                         <p>Stay updated with local projects.</p>
                     </div>
-                    <div class="card">
+                    <div class="card" data-href="jobs.php">
                         <h4>Job Openings</h4>
                         <p>Apply for various job openings and contracts</p>
                     </div>
-                    <div class="card">
+                    <div class="card" data-href="workers.php">
                         <h4>Administrative Staff</h4>
                         <p>Meet our Dedicated Public servants</p>
                     </div>
-                    <div class="card">
+                    <div class="card" data-href="blog.php">
                         <h4>News & Announcements</h4>
                         <p>Get the latest news and important announcements.</p>
                     </div>
@@ -58,5 +58,18 @@
     </main>
 
     <?php include('../includes/footer.php'); ?>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const href = this.getAttribute('data-href');
+                    if (href) {
+                        window.location.href = href;
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
