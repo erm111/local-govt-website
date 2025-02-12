@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Local Government Website</title>
+    <link rel="icon" type="image/jpg" href="../public/images/coa_logo.jpg">
     <link rel="stylesheet" href="../public/css/header.css">
     <link rel="stylesheet" href="../public/css/style.css">
 </head>
