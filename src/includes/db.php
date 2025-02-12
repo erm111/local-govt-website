@@ -11,9 +11,9 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
     // Display success message
-    echo "<div style='color: green; padding: 10px; margin: 10px; background: #e8f5e9; border-radius: 5px;'>
-            Database connection established successfully!
-          </div>";
+    // echo "<div style='color: green; padding: 10px; margin: 10px; background: #e8f5e9; border-radius: 5px;'>
+    //         Database connection established successfully!
+    //       </div>";
           
 } catch (PDOException $e) {
     // Handle connection error
